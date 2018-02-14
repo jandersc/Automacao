@@ -22,7 +22,7 @@ public class CapturarTelaComTakesScreenshot {
 		
 		
 		WebElement txtemail = driver.findElement(By.name("user[email]"));
-	  	txtemail.sendKeys("grupodetestesb@gmail.com TESTE JANDER");
+	  	txtemail.sendKeys("grupodetestesb@gmail.com TESTE JANDER CERQUEIRA");
 	  	
 	  	WebElement txtsenha = driver.findElement(By.name("user[user_password]"));
 	  	txtsenha.sendKeys("1112364");
