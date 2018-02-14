@@ -1,5 +1,3 @@
-package com.twitter;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -8,7 +6,7 @@ import java.util.List;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
-public class ManipulaComponente {
+public class InteragindoComExcelUtilizandoFOR {
 
 	public static void main(String[] args) {
 

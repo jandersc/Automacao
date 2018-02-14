@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class webdriverdemo {
+public class WebDriverDemo {
    public static void main(String[] args) {
    
       WebDriver driver = new FirefoxDriver();

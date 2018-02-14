@@ -1,5 +1,3 @@
-package com.twitter;
-
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -9,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Teste {
+public class ClasseRobot {
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\conrado\\Desktop\\Selenium\\chromedriver.exe");
 	
@@ -19,7 +17,7 @@ public class Teste {
 	StringSelection arq = new StringSelection("C:\\workspaceadri\\javaconv.pdf");//StringSelection -->classe responsável pela transferência da String
 	Toolkit.getDefaultToolkit().getSystemClipboard().setContents(arq, null);//conjunto de ferramentas padrão.
 	//getSystemClipboard --> classe que implementa um mecanismo para transferir dados usando operações de corte / cópia / pasta.
-	//setContents --> Conteudo de transferência
+	//setContents --> Conteudo de transfer�ncia
 	
 	Robot robot = new Robot();
 	robot.delay(1000);

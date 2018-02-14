@@ -6,13 +6,12 @@
 //- Ter os drivers (motores) dos navegadores
 //- Ter um servidor (Neste caso foi utilizado o Tomcat)
 
-package com.primeiropasso;   //Pacote
 
 import org.openqa.selenium.By;    //Biblioteca para localizar elementos
 import org.openqa.selenium.WebDriver;     //Biblioteca do Webdriver
 import org.openqa.selenium.chrome.ChromeDriver;     //Biblioteca do motor do ChromeDriver
 
-public class ManipulaComponenteRadiobutton {
+public class ManipulandoComponente {
 	WebDriver driver;
 
 	public static void main(String[] args) {

@@ -4,8 +4,6 @@
 //Como manipular um componente Checkbox com Selenium Webdriver
 
 
-package com.primeiropasso;   //Pacote
-
 import org.openqa.selenium.By;    //Biblioteca para localizar elementos
 import org.openqa.selenium.WebDriver;     //Biblioteca do Webdriver
 import org.openqa.selenium.chrome.ChromeDriver;     //Biblioteca do motor do ChromeDriver

@@ -1,10 +1,6 @@
-
-package com.twitter;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByClassName;
@@ -17,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AbrirNavegador {
+public class ClasseActionsSelenium {
 	
 	public static void main(String[]args){
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\conrado\\Desktop\\Selenium\\chromedriver.exe");

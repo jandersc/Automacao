@@ -1,7 +1,3 @@
-// Nesta fase, serão concatenados todos os conceitos vistos até o momento e inserido o conceito de seleção de valor na lista através do "new Select"
-
-package com.primeiropasso;//Pacote
-
 import org.openqa.selenium.By;//Classe para localizar elementos
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

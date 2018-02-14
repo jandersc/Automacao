@@ -1,4 +1,3 @@
-package com.twitter;
 
 import java.util.List;
 
@@ -7,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AbrirNavegador {
+public class InteragindoComExcelSelenium{
 
 	public static void main(String[] args) throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\conrado\\Desktop\\Selenium\\chromedriver.exe");
@@ -15,7 +14,7 @@ public class AbrirNavegador {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://twitter.com");
 
-		ManipulaComponente mc = new ManipulaComponente();
+		InteragindoComExcelSelenium mc = new InteragindoComExcelSelenium();
 		List<String> lista = mc.conteudoPlanilha();
 
 		WebElement txtemail = driver.findElement(By.name("user[email]"));
@@ -30,6 +29,11 @@ public class AbrirNavegador {
 
 		driver.quit();
 
+	}
+
+	private List<String> conteudoPlanilha() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
