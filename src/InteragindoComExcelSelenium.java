@@ -9,25 +9,25 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class InteragindoComExcelSelenium{
 
 	public static void main(String[] args) throws Exception {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\conrado\\Desktop\\Selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://twitter.com");
 
-		InteragindoComExcelSelenium mc = new InteragindoComExcelSelenium();
+		InteragindoComExcelUtilizandoFOR mc = new InteragindoComExcelUtilizandoFOR();
 		List<String> lista = mc.conteudoPlanilha();
 
 		WebElement txtemail = driver.findElement(By.name("user[email]"));
-		txtemail.sendKeys(lista.get(2));
+		txtemail.sendKeys(lista.get(1));
     //O conteudo da lista(seu respectivo valor contido na planilha)
 
 		WebElement txtsenha = driver.findElement(By.name("user[user_password]"));
-		txtsenha.sendKeys(lista.get(3));
+		txtsenha.sendKeys(lista.get(2));
 
 		
 		System.out.println("Usario e senha inseridos com sucesso utilizando Selenium");
 
-		driver.quit();
+		//driver.quit();
 
 	}
 

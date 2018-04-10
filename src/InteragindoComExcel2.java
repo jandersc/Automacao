@@ -10,7 +10,7 @@ public class InteragindoComExcel2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try{
-		File exc=new File("C:\\workspaceadri\\Plan1.xls");
+		File exc=new File("C:\\TesteSelenium\\Teste.xlsx");
 		FileInputStream bop=new FileInputStream(exc);
 		HSSFWorkbook wb = new  HSSFWorkbook(bop);
 		HSSFSheet ce1 = wb.getSheetAt(0);

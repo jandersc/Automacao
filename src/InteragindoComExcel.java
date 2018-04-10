@@ -17,7 +17,7 @@ public class InteragindoComExcel {
 
 	public static void main(String[] args) throws IOException {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Automação\\chromedriver32.exe");//Localização do motor instalado na máquina
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");//Localização do motor instalado na máquina
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://pt-br.facebook.com/");//abre a página 
 		
@@ -25,7 +25,7 @@ public class InteragindoComExcel {
 		
 
         try{
-	    FileInputStream file = new FileInputStream("C:\\Nova pasta\\Jhon.xlsx");
+	    FileInputStream file = new FileInputStream("C:\\TesteSelenium\\Teste.xlsx");
 	    XSSFWorkbook workbook = new XSSFWorkbook(file);
 	    XSSFSheet sheet = workbook .  getSheetAt ( 0 ); 
 	    Iterator<Row> rowIterator = sheet.iterator();
