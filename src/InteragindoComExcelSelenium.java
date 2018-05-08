@@ -12,16 +12,16 @@ public class InteragindoComExcelSelenium{
 		System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://twitter.com");
+		driver.get("https://www.instagram.com/accounts/login/?hl=pt-br");
 
 		InteragindoComExcelUtilizandoFOR mc = new InteragindoComExcelUtilizandoFOR();
 		List<String> lista = mc.conteudoPlanilha();
 
-		WebElement txtemail = driver.findElement(By.name("user[email]"));
+		WebElement txtemail = driver.findElement(By.name("username"));
 		txtemail.sendKeys(lista.get(1));
     //O conteudo da lista(seu respectivo valor contido na planilha)
 
-		WebElement txtsenha = driver.findElement(By.name("user[user_password]"));
+		WebElement txtsenha = driver.findElement(By.name("password"));
 		txtsenha.sendKeys(lista.get(2));
 
 		

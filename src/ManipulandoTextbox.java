@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.*;
 
 public class ManipulandoTextbox {
 	public static void main(String[]args){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\conrado\\Desktop\\Selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		
 	WebDriver  driver = new ChromeDriver();
 	 driver.get("https://twitter.com");

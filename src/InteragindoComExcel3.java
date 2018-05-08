@@ -86,7 +86,6 @@ public class InteragindoComExcel3 {
 	public static void readXLSXFile() throws IOException {
 		InputStream ExcelFileToRead = new FileInputStream("C:/TesteSelenium/Teste.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(ExcelFileToRead);
-
 		XSSFWorkbook test = new XSSFWorkbook();
 
 		XSSFSheet sheet = wb.getSheetAt(0);

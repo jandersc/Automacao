@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class InteragindoComExcelUtilizandoFOR {
 
@@ -40,10 +42,10 @@ public class InteragindoComExcelUtilizandoFOR {
 
 		List<String> lista = new ArrayList<>();
 		try {
-			File exc = new File("C:\\TesteSelenium\\Teste.xls");
+			File exc = new File("C:\\TesteSelenium\\Teste.xlsx");
 			FileInputStream bop = new FileInputStream(exc);
-			HSSFWorkbook wb = new HSSFWorkbook(bop);
-			HSSFSheet ce1 = wb.getSheetAt(0);
+			XSSFWorkbook wb = new XSSFWorkbook(bop);
+			XSSFSheet ce1 = wb.getSheetAt(0);
 
 			for (int r = 0; r < 5; r++) {
 

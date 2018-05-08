@@ -1,20 +1,21 @@
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class WebDriverDemo {
    public static void main(String[] args) {
    
-      WebDriver driver = new FirefoxDriver();
+	  System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
+	   
+	  WebDriver driver = new ChromeDriver();
       //Puts an Implicit wait, Will wait for 10 seconds before throwing exception
-      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
       
       //Launch website
       driver.navigate().to("http://www.calculator.net/");
-      
-      //Maximize the browser
-      driver.manage().window().maximize();
       
       // Click on Math Calculators
       driver.findElement(By.xpath(".//*[@id='menu']/div[3]/a")).click();
@@ -37,7 +38,7 @@ public class WebDriverDemo {
 
       
       // Print a Log In message to the screen
-      System.out.println(" The Result is " + result);
+      System.out.println(" O resultado é: " + result);
       
       //Close the Browser.
       driver.close();
