@@ -1,5 +1,8 @@
+package Teste;
+
 import java.io.File;
 import java.io.IOException;
+import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -7,32 +10,28 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.*;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class CapturarTelaComTakesScreenshot {
 	public static void main(String[]args) throws IOException{
-		System.setProperty("webdriver.chrome.driver","C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 		
+		System.setProperty("webdriver.chrome.driver","C:\\Desafio\\chromedriver.exe");
 		WebDriver  driver = new ChromeDriver();
-		driver.get("https://twitter.com");
-		//06/02/2018
-    //uso da classe TakesScreenshot para capturar a tela do Twitter
-		//uso do metodo getScreenshotAs(OutputType.FILE) para capturar e guardar no local especifico
-		//uso do FileUtils para copiar o arquivo capturado para determinada página
-		//uso da exceção caso a implementação não possa suportar a captura da tela
 		
-		
-		WebElement txtemail = driver.findElement(By.name("user[email]"));
-	  	txtemail.sendKeys("grupodetestesb@gmail.com TESTE JANDER CERQUEIRA");
+		driver.get("https://www.globo.com/"); //Acessar a p�gina de login da globo.com
+		driver.manage().window().maximize(); //Maximizar a tela 
 	  	
-	  	WebElement txtsenha = driver.findElement(By.name("user[user_password]"));
-	  	txtsenha.sendKeys("1112364");
+	  	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE); //Realiza a captura da tela
+		FileUtils.copyFile(scrFile, new File("C:\\Picture\\TelaCapturada.jpg")); //Cola a captura no local indicado
 	  	
-	  	File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File("C:\\Picture\\screenshot.png"));
+	  	System.out.println("Tela capturada com sucesso utilizando Selenium"); //Mensagem para confirmar captura 
 	  	
-	  	System.out.println("Tela capturada com sucesso utilizando Selenium");
+	  	Screenshot fullscreen = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver); //Capturando utilizando o Ashot
+	  	ImageIO.write(fullscreen.getImage(), "jpg", new File("C:\\Picture\\TelaFullCapturada.jpg")); //Cola a captura no local indicado
 	  	
-	  	driver.quit(); 
+	  	System.out.println("Tela FULL capturada com sucesso utilizando Selenium"); //Mensagem para confirmar captura FULL
 	  	
 	}
 	
